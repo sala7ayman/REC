@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - RAVEDO</title>
+    <title>Home - RAVEDO-test</title>
     <meta name="description" content="Enhenyero Bootstrap Template is perfect for Industrial, Engineering and other Corporate Companies. It is fully responsive, well docommented codes with clean and awesome design.">
     <meta name="keywords" content="bootstrap, industrial theme, engineering theme, responsive, modern, clean">
     <meta name="author" content="Bootstrap Seven Themes">
