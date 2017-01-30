@@ -26,8 +26,9 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', true),
-
+<<<<<<< .mine    'debug' => env('APP_DEBUG', true),
+=======    'debug' => env('APP_DEBUG', TRUE),
+>>>>>>> .theirs
     /*
     |--------------------------------------------------------------------------
     | Application URL
