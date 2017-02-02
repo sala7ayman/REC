@@ -25,10 +25,8 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
+   'debug' => env('APP_DEBUG', TRUE),
 
-<<<<<<< .mine    'debug' => env('APP_DEBUG', true),
-=======    'debug' => env('APP_DEBUG', TRUE),
->>>>>>> .theirs
     /*
     |--------------------------------------------------------------------------
     | Application URL
