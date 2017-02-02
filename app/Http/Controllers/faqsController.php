@@ -14,6 +14,6 @@ class faqsController extends BaseController
 
     public function faqs(){
 
-    	 return view('faqs');
+    	 return view('public.faqs');
     }
 }

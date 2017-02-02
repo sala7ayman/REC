@@ -14,6 +14,6 @@ class project2colController extends BaseController
 
     public function project2col(){
 
-    	 return view('project-2col');
+    	 return view('public.project-2col');
     }
 }

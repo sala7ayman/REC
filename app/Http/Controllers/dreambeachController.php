@@ -14,6 +14,6 @@ class dreambeachController extends BaseController
 
     public function dreambeach(){
 
-    	 return view('dream-beach');
+    	 return view('public.dream-beach');
     }
 }

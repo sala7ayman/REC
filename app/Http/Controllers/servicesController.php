@@ -14,37 +14,37 @@ class servicesController extends BaseController
 
     public function services(){
 
-    	 return view('services');
+    	 return view('public.services');
     }
 
     public function civilarchitecture(){
 
-    	 return view('service/civil-architecture');
+    	 return view('public.service.civil-architecture');
     }
 
     public function communications(){
 
-    	 return view('service/communications');
+    	 return view('public.service.communications');
     }
 
     public function construction(){
 
-    	 return view('service/construction');
+    	 return view('public.service.construction');
     }
 
     public function electrical(){
 
-    	 return view('service/electrical');
+    	 return view('public.service.electrical');
     }
 
     public function industrial(){
 
-    	 return view('service/industrial');
+    	 return view('public.service.industrial');
     }
 
     public function mechanical(){
 
-    	 return view('service/mechanical');
+    	 return view('public.service.mechanical');
     }
 
 }

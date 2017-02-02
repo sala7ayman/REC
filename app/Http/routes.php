@@ -30,9 +30,10 @@ Route::get('construction', 'servicesController@construction' );
 Route::get('electrical', 'servicesController@electrical' );
 Route::get('industrial', 'servicesController@industrial' );
 Route::get('mechanical', 'servicesController@mechanical' );
-Route::get('master', function(){return view('master');} );
 
 
 
 
+//---------------ADMIN SECTION -------------//
 
+Route::get('/admin/index', 'AdminIndexController@index' );

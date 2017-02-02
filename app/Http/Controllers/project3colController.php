@@ -14,6 +14,6 @@ class project3colController extends BaseController
 
     public function project3col(){
 
-    	 return view('project-3col');
+    	 return view('public.project-3col');
     }
 }

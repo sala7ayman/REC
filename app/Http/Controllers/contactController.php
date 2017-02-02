@@ -14,6 +14,6 @@ class contactController extends BaseController
 
     public function contact(){
 
-    	 return view('contact');
+    	 return view('public.contact');
     }
 }

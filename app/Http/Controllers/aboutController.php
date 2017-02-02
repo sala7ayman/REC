@@ -14,6 +14,6 @@ class aboutController extends BaseController
 
     public function about(){
 
-    	 return view('about');
+    	 return view('public.about');
     }
 }

@@ -14,6 +14,6 @@ class errorController extends BaseController
 
     public function errors(){
 
-    	 return view('404-error');
+    	 return view('public.404-error');
     }
 }
