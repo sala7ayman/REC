@@ -37,3 +37,4 @@ Route::get('mechanical', 'servicesController@mechanical' );
 //---------------ADMIN SECTION -------------//
 
 Route::get('/admin/index', 'AdminIndexController@index' );
+Route::get('/admin/banner', 'BannerController@index' );

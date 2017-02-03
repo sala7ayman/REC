@@ -259,6 +259,4 @@
    
 
     </body>
-
-<!-- Mirrored from bootstrapseven.com/demos/enhenyero/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2016 17:37:31 GMT -->
 </html>
