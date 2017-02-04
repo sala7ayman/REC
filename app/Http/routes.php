@@ -37,4 +37,10 @@ Route::get('mechanical', 'servicesController@mechanical' );
 //---------------ADMIN SECTION -------------//
 
 Route::get('/admin/index', 'AdminIndexController@index' );
-Route::get('/admin/banner', 'BannerController@index' );
+Route::get('/admin/banner', ['uses' => 'BannerController@index', 'as' => 'banners.index'] );
+Route::get('/admin/banner/create', ['uses' => 'BannerController@create', 'as' => 'banners.create'] );
+Route::get('/admin/banner/{id}/edit', ['uses' => 'BannerController@edit', 'as' => 'banners.edit']);
+Route::post('/admin/banner/{id?}', ['uses' => 'BannerController@store', 'as' => 'banners.store']);
+Route::put('/admin/banner/{id}', ['uses' => 'BannerController@update', 'as' => 'banners.update']);
+Route::delete('/admin/banner/{id}', ['uses' => 'BannerController@destroy', 'as' => 'banners.destroy']);
+Route::get('admin/banner/{id}/delete', ['uses' => 'BannerController@delete', 'as' => 'banners.delete']);

@@ -7,31 +7,40 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  {{ Html::style('bootstrap/css/bootstrap.min.css')}}
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  {{ Html::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css')}}
+
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+{{ Html::style('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')}}
   <!-- DataTables -->
-  <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
+{{ Html::style('plugins/datatables/dataTables.bootstrap.css')}}
 
   <!-- Theme style -->
-  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+{{ Html::style('dist/css/AdminLTE.min.css')}}
+
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../dist//css/skins/_all-skins.min.css">
+{{ Html::style('dist/css/skins/_all-skins.min.css')}}
+
   <!-- iCheck -->
-  <link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
+{{ Html::style('plugins/iCheck/flat/blue.css')}}
   <!-- Morris chart -->
-  <link rel="stylesheet" href="../plugins/morris/morris.css">
+{{ Html::style('plugins/morris/morris.css')}}
+
   <!-- jvectormap -->
-  <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+{{ Html::style('plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}
+
   <!-- Date Picker -->
-  <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
+{{ Html::style('plugins/datepicker/datepicker3.css')}}
+
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+{{ Html::style('plugins/daterangepicker/daterangepicker.css')}}
+
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+{{ Html::style('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}
+{{ Html::script('dist/js/sweetalert-dev.js')}}
+{{ Html::style('dist/css/sweetalert.css')}}
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +53,7 @@
   
   <header class="main-header">
   <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="../admin/index" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>REC</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -63,14 +72,14 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+            {{ HTML::image('dist/img/user2-160x160.jpg', 'User Image', array('class' => 'user-image')) }}
+
               <span class="hidden-xs">Admin</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
+               {{ HTML::image('dist/img/user2-160x160.jpg', 'User Image', array('class' => 'img-circle')) }}
                 <p>
                  Ravedo - Site Admin
                   
@@ -101,7 +110,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            {{ HTML::image('dist/img/user2-160x160.jpg', 'User Image', array('class' => 'img-circle')) }}
         </div>
         <div class="pull-left info">
           <p>Ravedo </p>
@@ -123,16 +132,9 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="#">
+          <a href="/admin/index">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
           </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
         </li>
         <li class="treeview">
           <a href="/admin/banner">
@@ -304,31 +306,28 @@
 @yield('content')
 
 <!-- jQuery 2.2.3 -->
-<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+{{Html::script('plugins/jQuery/jquery-2.2.3.min.js')}}
 <!-- Bootstrap 3.3.6 -->
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+{{Html::script('bootstrap/js/bootstrap.min.js')}}
 <!-- DataTables -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+{{Html::script('plugins/datatables/jquery.dataTables.min.js')}}
+{{Html::script('plugins/datatables/dataTables.bootstrap.min.js')}}
+
 <!-- SlimScroll -->
-<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+{{Html::script('plugins/slimScroll/jquery.slimscroll.min.js')}}
+
 <!-- FastClick -->
-<script src="../../plugins/fastclick/fastclick.js"></script>
+{{Html::script('plugins/fastclick/fastclick.js')}}
+
 <!-- AdminLTE App -->
-<script src="../../dist/js/app.min.js"></script>
+{{Html::script('dist/js/app.min.js')}}
+
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
-</script></body>
+{{Html::script('dist/js/demo.js')}}
+{{Html::script('dist/js/sweetalert.min.js"')}}
+<!-- Include this after the sweet alert js file -->
+ @include('sweet::alert')
+<script type="text/javascript">
+swal("Here's a message!", "It's pretty, isn't it?")</script>
+</body>
 </html>
