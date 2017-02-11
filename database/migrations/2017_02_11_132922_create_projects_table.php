@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactUsesTable extends Migration
+class CreateProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,14 @@ class CreateContactUsesTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_uses', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('office-info');
-            $table->string('google-map');
+            $table-> string('name') ;
+            $table-> string('place') ;
+            $table-> date('start_on') ;
+            $table-> string('desc') ;
+            
+
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class CreateContactUsesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('contact_uses');
+        Schema::drop('projects');
     }
 }

@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'indexController@index' );
+//Route::get('master', 'indexController@master' );
 Route::get('error', 'errorController@errors' );
 Route::get('about', 'aboutController@about' );
 Route::get('contact', 'contactController@contact' );
