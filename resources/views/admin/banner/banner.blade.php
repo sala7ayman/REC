@@ -1,11 +1,6 @@
 @extends('admin.templates.adminmaster')
 @section('content')
-@if(Session::has('success'))
-  <script>
-      swal("Banner has been saved successfully!")
-  </script>
-  {{Session::forget('success')}}
-@endif
+
   <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -52,8 +47,10 @@
                  <i class="fa fa-edit"></i> Update</a>
               </td>
               <td>
-                 <a href="{{ route('banners.destroy', $banner->id) }}" class="btn btn-danger btn-md">
-                  <i class="fa  fa-trash-o"></i> Delete</a>
+              {!! Form::open(['method' => 'DELETE', 'route' => ['banners.destroy', $banner->id],'id'=>'from1']) !!}
+              {!! Form::hidden('case_id', $banner->id, ['class' => 'form-control']) !!}
+              {!! Form::button('<i class="fa  fa-trash-o"> Delete</i>', array('type' => 'submit', 'class' => 'btn btn-danger ')) !!}
+              {!! Form::close() !!}
               </td>
             </tr>
             
@@ -77,4 +74,7 @@
       </div>
       </section>
     </div>
+
+
+ 
 @endsection
