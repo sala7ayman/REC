@@ -7,13 +7,19 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use DB;
 
 class indexController extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
     public function index(){
-
-    	 return view('public.index');
+         $ser=DB::table('projects')->get();
+    	 return view('index',compact('ser'));
     }
+
+   // public function master(){
+       //   $ser=DB::table('services')->get();
+    //	 return view('master',compact('ser'));
+    //}
 }
