@@ -18,7 +18,11 @@
         <section class="content">
           <!-- Small boxes (Stat box) -->
           
-           
+         {!! Form::model($banner, [
+              'method' => 'PUT',
+              'route' => ['banners.update', $banner->id],
+              'files' => true
+          ]) !!}
           
           <!-- Main row -->
           <div class="row">
@@ -37,13 +41,13 @@
                       <div class="form-group">
                         <label  class="col-sm-2 control-label" for="title" required>Title</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" name="title" id="title" placeholder="Title" required />
+                        <input type="text" value="{{$banner->main_title}}" class="form-control" name="title" id="title" placeholder="Title" required />
                         </div>
                       </div>
                       <div class="form-group">
                             <label  class="col-sm-2 control-label" for="desc">Description</label>
                             <div class="col-sm-10">
-                                <textarea rows="4" cols="50" class="form-control" name="desc" id="desc" placeholder="Description" required></textarea>
+                                <textarea rows="4"  cols="50" class="form-control" name="desc" id="desc" placeholder="Description" required>{{$banner->description}}</textarea>
                             </div>
    
                       </div>
@@ -66,19 +70,24 @@
                       <div class="form-group">
                           <label style="text-align: left;" class="col-sm-2 control-label" for="photo">Photo</label>
                          <div id="wrapper" class="col-sm-10">
-                              
                               <div  id="image-holder"></div>
 
-                              <input id="fileUpload" style="margin-top: 13px;" type = "file" name = "photo" size = "20" required />
-
+                              <input id="fileUpload" style="margin-top: 13px;" type = "file" name = "photo" size = "20" />
+                          </div>
+                          <div class="col-md-4"> 
+                              <img src="/img/slider/{{$banner->image_path}}"  class="user-image img-circle" height="80" width="80" alt="Image"/>
                           </div>
                       </div>
                     </div>
 
 
                     <div class="box-footer">
-                      <button type="submit" class="btn btn-info pull-left">Save</button>
-                      <a class="btn btn-default pull-right" href="{{ route('banners.index') }}">Cancel</a>
+                   <a class="btn btn-default pull-right" href="{{ route('banners.index') }}">Cancel</a>
+
+                     {{ Form::submit('Update', ['class' => 'btn btn-success']) }}
+                     {!! Form::close() !!}
+
+                      
                     </div>
                     
 

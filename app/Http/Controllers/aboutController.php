@@ -7,6 +7,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use DB;
+<<<<<<< HEAD
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -15,6 +16,8 @@ use App\aboutus;
 use Image;
 use Alert;
 use Session;
+=======
+>>>>>>> 17c5cca5bc02cd33157c2b5c8afc229100aa3dbb
 
 class aboutController extends BaseController
 {
@@ -23,6 +26,7 @@ class aboutController extends BaseController
     public function about(){
          $ser=DB::table('projects')->get();
     	 return view('public.about',compact('ser'));
+<<<<<<< HEAD
     }
 
 
@@ -82,6 +86,8 @@ class aboutController extends BaseController
         Session::flash('success', 'The About Us information was successfully save!');
         //return redirect('/admin/aboutus');
         return back();
+=======
+>>>>>>> 17c5cca5bc02cd33157c2b5c8afc229100aa3dbb
     }
 
     /**

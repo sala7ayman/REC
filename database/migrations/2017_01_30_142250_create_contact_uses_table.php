@@ -14,7 +14,15 @@ class CreateContactUsesTable extends Migration
     {
         Schema::create('contact_uses', function (Blueprint $table) {
             $table->increments('id');
+<<<<<<< HEAD
             $table->string('office-info');
+=======
+            $table->string('office-hours');
+            $table->string('address');
+            $table->string('tell');
+            $table->string('fax');
+
+>>>>>>> 17c5cca5bc02cd33157c2b5c8afc229100aa3dbb
             $table->string('google-map');
             $table->timestamps();
         });

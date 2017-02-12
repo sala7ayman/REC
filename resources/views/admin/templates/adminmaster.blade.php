@@ -309,6 +309,29 @@
     <!-- /.sidebar -->
   </aside>
 
+@if(Session::has('success'))
+  <script>
+    swal({
+                title: 'Good job!',
+                text: 'Image has been saved successfully !',
+                type: 'success',
+                timer: 2000,
+            })
+
+  </script>
+  {{Session::forget('success')}}
+@endif
+@if(Session::has('update'))
+  <script>
+  swal({
+                title: 'Good job!',
+                text: 'Image has been update successfully !',
+                type: 'success',
+                timer: 2000,
+            })
+  </script>
+  {{Session::forget('success')}}
+@endif
 @yield('content')
 
 <!-- jQuery 2.2.3 -->
@@ -318,6 +341,8 @@
 <!-- DataTables -->
 {{Html::script('plugins/datatables/jquery.dataTables.min.js')}}
 {{Html::script('plugins/datatables/dataTables.bootstrap.min.js')}}
+{{Html::script('plugins/datepicker/bootstrap-datepicker.js')}}
+{{Html::script('plugins/timepicker/bootstrap-timepicker.min.js')}}
 
 <!-- SlimScroll -->
 {{Html::script('plugins/slimScroll/jquery.slimscroll.min.js')}}
@@ -332,8 +357,43 @@
 {{Html::script('dist/js/demo.js')}}
 {{Html::script('dist/js/sweetalert.min.js"')}}
 <!-- Include this after the sweet alert js file -->
- @include('sweet::alert')
-<script type="text/javascript">
-swal("Here's a message!", "It's pretty, isn't it?")</script>
+<script>
+
+document.querySelector('#from1').addEventListener('submit', function(e) {
+    var form = this;
+    e.preventDefault();
+    swal({
+        title: "Are you sure?",
+        text: "You will not be able to recover this imaginary file!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: '#DD6B55',
+        confirmButtonText: 'Yes, I am sure!',
+        cancelButtonText: "No, cancel it!",
+        closeOnConfirm: false,
+        closeOnCancel: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+            swal({
+                title: 'Deleted!',
+                text: 'Image has been deleted successfully!',
+                type: 'success',
+                timer:2000
+            }, function() {
+                form.submit();
+            });
+
+        } else {
+            swal({ title: 'Canceled!',
+                text: 'delete has been Canceled!',
+                type: 'error',
+                timer:2000
+              });
+        }
+    });
+});
+</script>
+
 </body>
 </html>
