@@ -335,6 +335,8 @@
 <!-- DataTables -->
 {{Html::script('plugins/datatables/jquery.dataTables.min.js')}}
 {{Html::script('plugins/datatables/dataTables.bootstrap.min.js')}}
+{{Html::script('plugins/datepicker/bootstrap-datepicker.js')}}
+{{Html::script('plugins/timepicker/bootstrap-timepicker.min.js')}}
 
 <!-- SlimScroll -->
 {{Html::script('plugins/slimScroll/jquery.slimscroll.min.js')}}
