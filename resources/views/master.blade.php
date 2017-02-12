@@ -132,11 +132,12 @@
                     <li class="active"><a href="/">Home</a></li>
                     <li><a href="services">Services</a></li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects <span class="caret"></span></a>
+                      <a href="projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                        <li><a href="project-2col">Holiday Inn</a></li>
-                        <li><a href="project-3col">American International School</a></li>
-                        <li><a href="single-project">Dreams Beach</a></li>
+                        @foreach ($ser as $s)
+                        <li><a href="project-2col">{{ $s->name}}</a></li>
+                        @endforeach
+                        
                       </ul>
                     </li>
 					<li><a href="about">About Us</a></li>
@@ -145,15 +146,7 @@
                     <li class="dropdown">
                     
                     </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pages <span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="404-error.html">404 Error Page</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="career.html">Career Form</a></li>
-                      </ul>
-                    </li>
+                    
                 </ul>
             </div><!-- /.navbar-collapse -->
 

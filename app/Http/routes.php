@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'indexController@index' );
+//Route::get('master', 'indexController@master' );
 Route::get('error', 'errorController@errors' );
 Route::get('about', 'aboutController@about' );
 Route::get('contact', 'contactController@contact' );
@@ -37,6 +38,7 @@ Route::get('mechanical', 'servicesController@mechanical' );
 //---------------ADMIN SECTION -------------//
 
 Route::get('/admin/index', 'AdminIndexController@index' );
+
 Route::get('/admin/banner', ['uses' => 'BannerController@index', 'as' => 'banners.index'] );
 Route::get('/admin/banner/create', ['uses' => 'BannerController@create', 'as' => 'banners.create'] );
 Route::get('/admin/banner/{id}/edit', ['uses' => 'BannerController@edit', 'as' => 'banners.edit']);
@@ -44,3 +46,13 @@ Route::post('/admin/banner/{id?}', ['uses' => 'BannerController@store', 'as' => 
 Route::put('/admin/banner/{id}', ['uses' => 'BannerController@update', 'as' => 'banners.update']);
 Route::delete('/admin/banner/{id}', ['uses' => 'BannerController@destroy', 'as' => 'banners.destroy']);
 Route::get('admin/banner/{id}/delete', ['uses' => 'BannerController@delete', 'as' => 'banners.delete']);
+
+
+//---------------ADMIN SECTION(about us)  -------------//
+Route::get('/admin/aboutus', 'aboutController@index' );
+Route::get('/admin/aboutus/create','aboutController@create' );
+Route::get('/admin/aboutus/{id}/edit', 'aboutController@edit');
+Route::post('/admin/aboutus/store','aboutController@store');
+Route::post('/admin/aboutus/{id}/update', 'aboutController@update');
+Route::delete('/admin/aboutus/{id}/destroy', 'aboutController@destroy');
+Route::get('/admin/aboutus/{id}/delete', 'aboutController@delete');

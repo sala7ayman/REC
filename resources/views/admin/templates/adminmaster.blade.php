@@ -143,6 +143,12 @@
           </a>
         </li>
         <li class="treeview">
+          <a href="/admin/aboutus">
+            <i class="fa  fa-picture-o"></i>
+            <span>About Us</span>
+          </a>
+        </li>
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Layout Options</span>
