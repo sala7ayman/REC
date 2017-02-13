@@ -7,17 +7,13 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use DB;
-<<<<<<< HEAD
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Validator;
-use App\aboutus;
+use App\aboutu;
 use Image;
 use Alert;
 use Session;
-=======
->>>>>>> 17c5cca5bc02cd33157c2b5c8afc229100aa3dbb
 
 class aboutController extends BaseController
 {
@@ -26,7 +22,6 @@ class aboutController extends BaseController
     public function about(){
          $ser=DB::table('projects')->get();
     	 return view('public.about',compact('ser'));
-<<<<<<< HEAD
     }
 
 
@@ -67,7 +62,7 @@ class aboutController extends BaseController
             ));
 
         // store in the database
-        $about = new aboutus;
+        $about = new aboutu;
 
         $about->desc = $request->desc;
         $about->ourhistory = $request->title;
@@ -86,8 +81,6 @@ class aboutController extends BaseController
         Session::flash('success', 'The About Us information was successfully save!');
         //return redirect('/admin/aboutus');
         return back();
-=======
->>>>>>> 17c5cca5bc02cd33157c2b5c8afc229100aa3dbb
     }
 
     /**
@@ -108,11 +101,8 @@ class aboutController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(aboutus $aboutus)
+    public function edit(aboutu $aboutus)
     {
-        // find the post in the database and save as a var
-        
-        // return the view and pass in the var we previously created
      
         return view('/admin/aboutus/edit',compact('aboutus'));
     }
@@ -124,7 +114,7 @@ class aboutController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, aboutus $aboutus)
+    public function update(Request $request, aboutu $aboutus)
     {
         // Validate the data
         $this->validate($request, array(
@@ -132,7 +122,7 @@ class aboutController extends BaseController
                 'desc' => 'required|max:1200',
                 'photo'  => 'required'
             ));
-        $aboutus ->update($request ->all());
+        $aboutu ->update($request ->all());
         
         
         
@@ -157,7 +147,7 @@ class aboutController extends BaseController
     {
     	//aboutus $aboutus
         
-        $aboutus = aboutus::find($id);
+        $aboutus = aboutu::find($id);
         $aboutus->delete();
         Session::flash('success', 'The post was successfully deleted.');
         return redirect('/admin/aboutus');

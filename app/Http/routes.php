@@ -45,7 +45,6 @@ Route::get('/admin/banner/{id}/edit', ['uses' => 'BannerController@edit', 'as' =
 Route::post('/admin/banner/{id?}', ['uses' => 'BannerController@store', 'as' => 'banners.store']);
 Route::put('/admin/banner/{id}', ['uses' => 'BannerController@update', 'as' => 'banners.update']);
 Route::delete('/admin/banner/{id}', ['uses' => 'BannerController@destroy', 'as' => 'banners.destroy']);
-<<<<<<< HEAD
 Route::get('admin/banner/{id}/delete', ['uses' => 'BannerController@delete', 'as' => 'banners.delete']);
 
 
@@ -57,10 +56,9 @@ Route::post('/admin/aboutus/store','aboutController@store');
 Route::post('/admin/aboutus/{id}/update', 'aboutController@update');
 Route::delete('/admin/aboutus/{id}/destroy', 'aboutController@destroy');
 Route::get('/admin/aboutus/{id}/delete', 'aboutController@delete');
-=======
 
 
 Route::get('/admin/contact', ['uses' => 'AdminContactController@index', 'as' => 'contact.index'] );
 
 // Route::get('admin/banner/{id}/delete', ['uses' => 'BannerController@delete', 'as' => 'banners.delete']);
->>>>>>> 17c5cca5bc02cd33157c2b5c8afc229100aa3dbb
+

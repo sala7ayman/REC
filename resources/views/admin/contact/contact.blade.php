@@ -36,43 +36,13 @@
                 <!-- /.input group -->
               </div>
 
-
-
-              <!-- /.form group -->
-
-              <!-- Date mm/dd/yyyy -->
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input name="hours" type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask="">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
               <!-- phone mask -->
               <div class="form-group">
-                <label>US phone mask:</label>
+                <label>Address :</label>
 
                 <div class="input-group">
                   <div class="input-group-addon">
-                    <i class="fa fa-phone"></i>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>Intl US phone mask:</label>
-
-                <div class="input-group">
-                  <div class="input-group-addon">
-                    <i class="fa fa-phone"></i>
+                    <i class="fa fa-map-marker"></i>
                   </div>
                   <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask="">
                 </div>
@@ -151,9 +121,6 @@
         <!-- /.col (left) -->
         <div class="col-md-6">
           <div>
-            <div class="box-header">
-              <h3 class="box-title">Date picker</h3>
-            </div>
             <div class="box-body">
               <!-- Date -->
               <div class="form-group">
